@@ -117,6 +117,78 @@ class WishlistScreen extends StatelessWidget {
           ),
         ],
       ),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.horizontal(left: Radius.circular(12)),
+            child: Image.asset(
+              product.imageUrl,
+              width: 120,
+              fit: BoxFit.cover,
+              height: 120,
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.all(12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    product.name,
+                    style: AppTextStyle.withColor(
+                      AppTextStyle.bodyLarge,
+                      Theme.of(context).textTheme.bodyLarge!.color!,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    product.category,
+                    style: AppTextStyle.withColor(
+                      AppTextStyle.bodySmall,
+                      isDark ? Colors.grey[400]! : Colors.grey[600]!,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "\$${product.price.toStringAsFixed(2)}",
+                        style: AppTextStyle.withColor(
+                          AppTextStyle.h3,
+                          Theme.of(context).textTheme.bodyLarge!.color!,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.delete_outline,
+                              color: isDark
+                                  ? Colors.grey[400]
+                                  : Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
