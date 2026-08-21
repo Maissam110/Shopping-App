@@ -1,5 +1,6 @@
 import 'package:e_comerence_app/controllers/auth_controller.dart';
 import 'package:e_comerence_app/utils/app_textstyles.dart';
+import 'package:e_comerence_app/view/settings_screen.dart';
 import 'package:e_comerence_app/view/widegts/signin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class AccountScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () => Get.to(() => SettingsScreen()),
             icon: Icon(
               Icons.settings_outlined,
               color: isDark ? Colors.white : Colors.black,
