@@ -1,4 +1,5 @@
 import 'package:e_comerence_app/controllers/auth_controller.dart';
+import 'package:e_comerence_app/features/my%20orders/view/screen/my_orders_screen.dart';
 import 'package:e_comerence_app/utils/app_textstyles.dart';
 import 'package:e_comerence_app/view/settings_screen.dart';
 import 'package:e_comerence_app/view/widegts/signin_screen.dart';
@@ -151,6 +152,7 @@ class AccountScreen extends StatelessWidget {
                   //   //  Navigate to Help Center
                 } else if (items['title'] == 'My Order') {
                   //   //  Navigate to My Orders Screen
+                  Get.to(() => MyOrdersScreen());
                 }
               },
             ),
