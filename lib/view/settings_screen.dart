@@ -1,6 +1,7 @@
 import 'package:e_comerence_app/controllers/theme_controller.dart';
 import 'package:e_comerence_app/utils/app_textstyles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class SettingsScreen extends StatelessWidget {
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () => Get.back(),
           icon: Icon(
             Icons.arrow_back_ios,
             color: isDark ? Colors.white : Colors.black,

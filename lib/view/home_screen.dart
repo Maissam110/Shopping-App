@@ -1,4 +1,5 @@
 import 'package:e_comerence_app/controllers/theme_controller.dart';
+import 'package:e_comerence_app/features/notification/view/notifications_screen.dart';
 import 'package:e_comerence_app/view/all_products_screen.dart';
 import 'package:e_comerence_app/view/cart_screen.dart';
 import 'package:e_comerence_app/view/widegts/category_chips.dart';
@@ -47,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                   Spacer(),
                   // Notification Icon
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => NotificationsScreen()),
                     icon: Icon(Icons.notifications_outlined),
                   ),
 
